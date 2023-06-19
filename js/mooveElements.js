@@ -50,24 +50,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function removeDotsImg(windowSize) {
   const dotsImgContainer = document.querySelector(".dotted__image-container");
-  if (dotsImgContainer && windowSize > 767) {
+  if (dotsImgContainer && windowSize <= 767) {
     dotsImgContainer.parentNode.removeChild(dotsImgContainer);
+    dotsImgAdded = false;
   }
 }
+
+
 function addDotsImg(windowSize) {
   const dotsImgContainer = document.querySelector(".dotted__image-container");
+
   if (windowSize >= 768 && !dotsImgContainer) {
+
     const dotsImgContainer = document.createElement("div");
     dotsImgContainer.classList.add("dotted__image-container");
+
     const dotsImg = document.createElement("img");
     dotsImg.id = "dots";
     dotsImg.src = "/assets/desktop/bg-pattern-dots.svg";
+
     dotsImgContainer.appendChild(dotsImg);
+
     const parentNode = document.querySelector(".content__container");
     parentNode.appendChild(dotsImgContainer);
+
+    dotsImgContainer.style.top = parentNode.clientHeight + 100 + 'px'
     dotsImgAdded = true;
-  } else if (windowSize < 768 && dotsImgContainer) {
-    dotsImgContainer.parentNode.removeChild(dotsImgContainer);
-    dotsImgAdded = false;
   }
 }
