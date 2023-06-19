@@ -1,15 +1,16 @@
 "use strict";
 // Попытка передвижения элементов
 const windowSize = window.innerWidth;
-
+let dotsImgAdded = false;
 document.addEventListener("DOMContentLoaded", function () {
   elementMoover(window.innerWidth);
+  addDotsImg(window.innerWidth);
   brForParagrapg(window.innerWidth);
 
   window.addEventListener("resize", function () {
     elementMoover(window.innerWidth);
-    addDotsImg(window.innerWidth);
     removeDotsImg(window.innerWidth);
+    addDotsImg(window.innerWidth);
     brForParagrapg(window.innerWidth);
   });
 
@@ -23,9 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       parent.insertBefore(icons, fields);
       changeImage(windowSize);
       addDotsImg(windowSize);
-    }
-
-    if (windowSize <= 767) {
+    } else {
       parent.insertBefore(fields, icons);
       removeDotsImg(windowSize);
     }
@@ -41,33 +40,34 @@ document.addEventListener("DOMContentLoaded", function () {
     if (windowSize >= 768) {
       const paragraph = document.querySelector(".text__pod");
       const wordsList = paragraph.innerHTML.split(" ");
-      for (let i = 0; i < wordsList.length; i++) {
-        if (wordsList[i] === "Casts") {
-          wordsList[i] += "<br>";
-        }
-        paragraph.innerHTML = wordsList.join(" ");
-      }
+      const updatedWordsList = wordsList.map((word) =>
+        word === "Casts" ? word + "<br>" : word
+      );
+      paragraph.innerHTML = updatedWordsList.join(" ");
     }
   }
 });
 
 function removeDotsImg(windowSize) {
-  const dotsImg = document.querySelector(".dotted__image-container");
-  if (dotsImg && windowSize <= 767) {
-    dotsImg.parentNode.removeChild(dotsImg);
+  const dotsImgContainer = document.querySelector(".dotted__image-container");
+  if (dotsImgContainer && windowSize > 767) {
+    dotsImgContainer.parentNode.removeChild(dotsImgContainer);
   }
 }
 function addDotsImg(windowSize) {
-  if (windowSize >= 768 && !dotsImgAdded) {
-    // Проверяем, что размер окна достаточный и контейнер ещё не добавлен
+  const dotsImgContainer = document.querySelector(".dotted__image-container");
+  if (windowSize >= 768 && !dotsImgContainer) {
     const dotsImgContainer = document.createElement("div");
     dotsImgContainer.classList.add("dotted__image-container");
     const dotsImg = document.createElement("img");
     dotsImg.id = "dots";
-    dotsImg.src = "/assets/tablet/image-host.jpg";
+    dotsImg.src = "/assets/desktop/bg-pattern-dots.svg";
     dotsImgContainer.appendChild(dotsImg);
     const parentNode = document.querySelector(".content__container");
     parentNode.appendChild(dotsImgContainer);
-    dotsImgAdded = true; // Устанавливаем флаг, что контейнер добавлен
+    dotsImgAdded = true;
+  } else if (windowSize < 768 && dotsImgContainer) {
+    dotsImgContainer.parentNode.removeChild(dotsImgContainer);
+    dotsImgAdded = false;
   }
 }
