@@ -26,13 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
       addDotsImg(windowSize);
     } else {
       parent.insertBefore(fields, icons);
+      changeImage(windowSize);
       removeDotsImg(windowSize);
-    }
-    function changeImage(windowSize) {
-      const backgroundImg = document.querySelector(".mobile__background-image");
-      if (windowSize >= 768) {
-        backgroundImg.src = "/assets/tablet/image-host.jpg";
-      }
     }
   }
   // Adding br tag to the Casts word when the window size min width 768px
@@ -46,6 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
       paragraph.innerHTML = updatedWordsList.join(" ");
     }
   }
+  function changeImage(windowSize) {
+    const backgroundImg = document.querySelector(".mobile__background-image");
+    if (windowSize < 768) {
+      backgroundImg.src = "/assets/mobile/image-host.jpg";
+    } else if (windowSize >= 768 && windowSize < 1440) {
+      backgroundImg.src = "/assets/tablet/image-host.jpg";
+    } else {
+      backgroundImg.src = "/assets/desktop/image-host.jpg";
+    }
+  }
 });
 
 function removeDotsImg(windowSize) {
@@ -56,12 +61,10 @@ function removeDotsImg(windowSize) {
   }
 }
 
-
 function addDotsImg(windowSize) {
   const dotsImgContainer = document.querySelector(".dotted__image-container");
 
   if (windowSize >= 768 && !dotsImgContainer) {
-
     const dotsImgContainer = document.createElement("div");
     dotsImgContainer.classList.add("dotted__image-container");
 
@@ -71,10 +74,9 @@ function addDotsImg(windowSize) {
 
     dotsImgContainer.appendChild(dotsImg);
 
-    const parentNode = document.querySelector(".content__container");
+    const parentNode = document.querySelector("body");
     parentNode.appendChild(dotsImgContainer);
 
-    dotsImgContainer.style.top = parentNode.clientHeight + 100 + 'px'
     dotsImgAdded = true;
   }
 }

@@ -11,6 +11,14 @@
     mix-blend-mode: screen;
   }
 }
+@media (min-width: 1440px) {
+  .mobile__background-image {
+    position: fixed;
+    margin: 130px 0px 1130px 130px;
+    opacity: 0.85;
+    mix-blend-mode: normal;
+  }
+}
 
 .logo__container {
   position: relative;
@@ -21,7 +29,14 @@
 }
 @media (min-width: 768px) {
   .logo__container {
-    margin: 50px 595px 0 36px;
+    position: fixed;
+    margin: 50px 595px 918px 39px;
+    padding-top: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .logo__container {
+    margin: 102px 1140px 742px 165px;
     padding-top: 0;
   }
 }
@@ -60,12 +75,20 @@
 }
 @media (min-width: 768px) {
   .content__container {
-    position: relative;
+    position: fixed;
     width: 635px;
     background-color: #121725;
     height: 510px;
     z-index: 1;
-    margin: 152px 94px 0px 39px;
+    margin: 258px 94px 257px 39px;
+  }
+}
+@media (min-width: 1440px) {
+  .content__container {
+    position: fixed;
+    margin: 262px 252px 130px 165px;
+    background-color: #121725;
+    z-index: 1;
   }
 }
 
@@ -219,10 +242,18 @@
 
 @media (min-width: 768px) {
   .dotted__image-container {
-    position: absolute;
+    position: fixed;
+    top: 0;
     width: 232px;
     height: 104px;
-    left: 30px;
-    /* top: 920px; */
+    margin: 920px 506px 0 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .dotted__image-container {
+    position: fixed;
+    width: 232px;
+    height: 104px;
+    margin: 718px 0px 78px 1043px;
   }
 }/*# sourceMappingURL=podMobile.css.map */
