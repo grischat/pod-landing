@@ -175,6 +175,7 @@
   }
 
   .button__access {
+    position: relative;
     display: flex;
     border-style: solid;
     width: 327px;
@@ -188,12 +189,20 @@
     font-weight: 600;
     font-size: 14px;
     opacity: 0.99;
+    transition-duration: 0.4s;
+    top: 5px;
 
     @media (min-width: 768px) {
       width: 162px;
       padding: 9px 27px;
+      left: 5px;
+      top: 0px;
     }
   }
+}
+
+.button__access:hover {
+  background-color: var(--button-hover);
 }
 
 ::placeholder {
@@ -243,4 +252,15 @@
     height: 104px;
     margin: 718px 0px 78px 1043px;
   }
+}
+
+#validationMessage {
+  color: #fb3e3e;
+  position: absolute;
+  bottom: -20px;
+  left: 45px;
+  font-size: 12px;
+  font-style: bold;
+  font-family: "Chivo", sans-serif;
+  font-weight: 600;
 }

@@ -1,36 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500&family=Chivo:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500&family=Chivo:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500&family=Chivo:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500&family=Chivo:wght@300&display=swap");
 
 :root {
-    --background-main-color: #121725;
-    --green-main-color: #54e6af;
-    --text-color-white: #ffffff;
-    --text-color-grey: #c2cbe5;
-    --field-email-grey: #2c344b;
-    --field-email-light-grey: #5a668a;
-    font-family: 'Anton', sans-serif;
-    font-family: 'Caveat', cursive;
-    font-family: 'Chivo', sans-serif;
+  --background-main-color: #121725;
+  --green-main-color: #54e6af;
+  --text-color-white: #ffffff;
+  --text-color-grey: #c2cbe5;
+  --field-email-grey: #2c344b;
+  --field-email-light-grey: #5a668a;
+  --button-hover: #b3ffe2;
+  font-family: "Anton", sans-serif;
+  font-family: "Caveat", cursive;
+  font-family: "Chivo", sans-serif;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 body {
-    background-color: var(--background-main-color);
+  background-color: var(--background-main-color);
 }
 
-
 @media (min-width: 375px) {
-    .max-width-container {
-        width: 375px;
-        margin: auto;
-    }
+  .max-width-container {
+    width: 375px;
+    margin: auto;
+  }
 }

@@ -18,6 +18,7 @@
   </style> -->
   <title>Frontend Mentor | Pod</title>
   <script src="/js/mooveElements.js"></script>
+  
 </head>
 
 <body>
@@ -47,15 +48,22 @@
       <img class="logo__google" src="/assets/desktop/google-podcasts.svg" alt="Google Podcasts logo">
       <img class="logo__pocket" src="/assets/desktop/pocket-casts.svg" alt="Pocket Cast logo">
     </div>
+    
     <form class="acess__request" id="icons-pod">
-      <input type="text" class="email__input" placeholder="Email address" name="emailInput"><br>
-      <input type="submit" class="button__access" value="Reqeuest Access">
+      <div class="form-group">
+        <input type="text" class="email__input" placeholder="Email address" name="emailInput" id="input__email">
+      <div id="validationMessage"></div>
+      </div>
+      <input type="submit" class="button__access" value="Reqeuest Access" id = "button__submit">
     </form>
+    
   </div>
   <div class="dotted__image-container">
     <img id="dots" src="/assets/desktop/bg-pattern-dots.svg" alt="Dots image">
   </div>
   </div>
+
 </body>
 
+<script src="/js/email.js"></script>  
 </html>
