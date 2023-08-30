@@ -3,10 +3,11 @@
 const windowSize = window.innerWidth;
 let dotsImgAdded = false;
 document.addEventListener("DOMContentLoaded", function () {
+  console.log(windowSize)
   elementMoover(window.innerWidth);
   addDotsImg(window.innerWidth);
   brForParagrapg(window.innerWidth);
-
+  // console.log(windowSize)
   window.addEventListener("resize", function () {
     elementMoover(window.innerWidth);
     removeDotsImg(window.innerWidth);
@@ -19,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const icons = document.getElementById("icons-pod");
     const fields = document.getElementById("media-container");
     const parent = icons.parentNode;
+    
+    
 
     if (windowSize >= 768) {
       parent.insertBefore(icons, fields);
