@@ -75,7 +75,7 @@ function addDotsImg(windowSize) {
 
     const dotsImg = document.createElement("img");
     dotsImg.id = "dots";
-    dotsImg.src = `${basePath}/assets/desktop/bg-pattern-dots.svg`;
+    dotsImg.src = `../pod-landing/assets/desktop/bg-pattern-dots.svg`;
 
     dotsImgContainer.appendChild(dotsImg);
 
