@@ -1,12 +1,12 @@
 "use strict";
 
-const basePath = '/pod-landing';
+
 
 const windowSize = window.innerWidth;
 let dotsImgAdded = false;
-import imageMobile from `${basePath}/assets/mobile/image-host.jpg`;
-import imageTablet from `${basePath}/assets/tablet/image-host.jpg`;
-import imageDesk from `${basePath}/assets/desktop/image-host.jpg`;
+import imageMobile from './assets/mobile/image-host.jpg';
+import imageTablet from './assets/tablet/image-host.jpg';
+import imageDesk from './assets/desktop/image-host.jpg';
 
 document.addEventListener("DOMContentLoaded", function () {
   
