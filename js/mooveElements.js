@@ -4,9 +4,9 @@
 
 const windowSize = window.innerWidth;
 let dotsImgAdded = false;
-import imageMobile from './assets/mobile/image-host.jpg';
-import imageTablet from './assets/tablet/image-host.jpg';
-import imageDesk from './assets/desktop/image-host.jpg';
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   
@@ -53,11 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function changeImage(windowSize) {
     const backgroundImg = document.querySelector(".mobile__background-image");
     if (windowSize < 768) {
-      backgroundImg.src = imageMobile;
+      backgroundImg.src = '../pod-landing/assets/desktop/image-host.jpg';
     } else if (windowSize >= 768 && windowSize < 1440) {
-      backgroundImg.src = imageTablet;
+      backgroundImg.src = '../pod-landing/assets/desktop/image-host.jpg';
     } else {
-      backgroundImg.src = imageDesk;
+      backgroundImg.src = '../pod-landing/assets/desktop/image-host.jpg';
     }
   }
 });
