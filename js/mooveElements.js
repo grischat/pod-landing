@@ -1,11 +1,15 @@
 "use strict";
-import imageMobile from '../assets/mobile/image-host.jpg'
-import imageTablet from '../assets/tablet/image-host.jpg'
-import imageDesk from '../assets/desktop/image-host.jpg'
-// Попытка передвижения элементов
+
+const basePath = '/pod-landing';
+
 const windowSize = window.innerWidth;
 let dotsImgAdded = false;
+import imageMobile from `${basePath}/assets/mobile/image-host.jpg`;
+import imageTablet from `${basePath}/assets/tablet/image-host.jpg`;
+import imageDesk from `${basePath}/assets/desktop/image-host.jpg`;
+
 document.addEventListener("DOMContentLoaded", function () {
+  
   elementMoover(window.innerWidth);
   addDotsImg(window.innerWidth);
   brForParagrapg(window.innerWidth);
@@ -33,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       removeDotsImg(windowSize);
     }
   }
+
   // Adding br tag to the Casts word when the window size min width 768px
   function brForParagrapg(windowSize) {
     if (windowSize >= 768) {
@@ -44,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       paragraph.innerHTML = updatedWordsList.join(" ");
     }
   }
+
   function changeImage(windowSize) {
     const backgroundImg = document.querySelector(".mobile__background-image");
     if (windowSize < 768) {
@@ -73,7 +79,7 @@ function addDotsImg(windowSize) {
 
     const dotsImg = document.createElement("img");
     dotsImg.id = "dots";
-    dotsImg.src = "../pod-landing/assets/desktop/bg-pattern-dots.svg";
+    dotsImg.src = `${basePath}/assets/desktop/bg-pattern-dots.svg`;
 
     dotsImgContainer.appendChild(dotsImg);
 
