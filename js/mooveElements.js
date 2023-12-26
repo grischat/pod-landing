@@ -1,12 +1,8 @@
 "use strict";
 
 
-
 const windowSize = window.innerWidth;
 let dotsImgAdded = false;
-
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   
