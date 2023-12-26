@@ -1,17 +1,38 @@
+.main__container {
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    
+  }
+  @media (min-width: 1440px) {
+    
+    align-items: flex-start;
+    
+    
+  }
+}
+
 .mobile__background-image {
   position: absolute;
+  width: 100%;
   opacity: 0.1;
   background-image: url("/starter-code/assets/mobile/image-host.jpg");
+  object-fit: cover;
 
   @media (min-width: 768px) {
-    left: 277px;
+    width: 30.6rem;
     top: 0px;
     opacity: 0.85;
     mix-blend-mode: screen;
   }
   @media (min-width: 1440px) {
-    position: fixed;
-    margin: 130px 0px 1130px 130px;
+    
+    width: 55rem;
+    height: 40rem;
+    margin: 130px 0px 1130px 0px;
     opacity: 0.85;
     mix-blend-mode: normal;
   }
@@ -25,13 +46,13 @@
   margin: 0px;
 
   @media (min-width: 768px) {
-    position: fixed;
-    margin: 50px 595px 918px 39px;
-    padding-top: 0;
+    top: 0;
+    position: absolute;
+    margin-right: 36rem;
   }
   @media (min-width: 1440px) {
-    margin: 102px 1140px 742px 165px;
-    padding-top: 0;
+    margin-left: 10rem;
+    margin-top: 4rem;
   }
 }
 
@@ -68,15 +89,13 @@
   margin-top: 57px;
 
   @media (min-width: 768px) {
-    position: fixed;
     width: 635px;
     background-color: #121725;
     height: 510px;
     z-index: 1;
-    margin: 258px 94px 257px 39px;
+    margin: 258px 94px 157px 39px;
   }
   @media (min-width: 1440px) {
-    position: fixed;
     margin: 262px 252px 130px 165px;
     background-color: #121725;
     z-index: 1;
@@ -191,7 +210,7 @@
     opacity: 0.99;
     transition-duration: 0.4s;
     top: 5px;
-
+    cursor: pointer;
     @media (min-width: 768px) {
       width: 162px;
       padding: 9px 27px;
@@ -240,17 +259,16 @@
 
 .dotted__image-container {
   @media (min-width: 768px) {
-    position: fixed;
-    top: 0;
+    margin-left: 1rem;
+    margin-top: 6rem;
     width: 232px;
     height: 104px;
-    margin: 920px 506px 0 30px;
   }
   @media (min-width: 1440px) {
-    position: fixed;
     width: 232px;
     height: 104px;
-    margin: 718px 0px 78px 1043px;
+    margin-left: 70rem;
+    margin-top: -3rem;
   }
 }
 
@@ -264,3 +282,6 @@
   font-family: "Chivo", sans-serif;
   font-weight: 600;
 }
+
+
+
