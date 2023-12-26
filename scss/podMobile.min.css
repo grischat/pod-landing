@@ -1,7 +1,7 @@
 .mobile__background-image {
     position: absolute;
     opacity: .1;
-    background-image: url("/starter-code/assets/mobile/image-host.jpg")
+    
 }
 
 .logo__container {
