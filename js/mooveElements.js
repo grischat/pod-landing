@@ -1,4 +1,7 @@
 "use strict";
+import imageMobile from '../assets/mobile/image-host.jpg'
+import imageTablet from '../assets/tablet/image-host.jpg'
+import imageDesk from '../assets/desktop/image-host.jpg'
 // Попытка передвижения элементов
 const windowSize = window.innerWidth;
 let dotsImgAdded = false;
@@ -44,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function changeImage(windowSize) {
     const backgroundImg = document.querySelector(".mobile__background-image");
     if (windowSize < 768) {
-      backgroundImg.src = "/pod-landing/assets/mobile/image-host.jpg";
+      backgroundImg.src = imageMobile;
     } else if (windowSize >= 768 && windowSize < 1440) {
-      backgroundImg.src = "/pod-landing/assets/tablet/image-host.jpg";
+      backgroundImg.src = imageTablet;
     } else {
-      backgroundImg.src = "/pod-landing/assets/desktop/image-host.jpg";
+      backgroundImg.src = imageDesk;
     }
   }
 });
