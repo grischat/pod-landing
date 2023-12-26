@@ -17,7 +17,9 @@
   position: absolute;
   width: 100%;
   opacity: 0.1;
-  object-fit: cover;
+  background-image: url("/starter-code/assets/mobile/image-host.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 768px) {
   .mobile__background-image {
