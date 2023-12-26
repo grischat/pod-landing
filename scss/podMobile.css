@@ -1,7 +1,7 @@
 .mobile__background-image {
   position: absolute;
   opacity: 0.1;
-  background-image: url("../pod-landing/assets/mobile/image-host.jpg");
+  
 }
 @media (min-width: 768px) {
   .mobile__background-image {
