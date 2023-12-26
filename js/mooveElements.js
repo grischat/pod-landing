@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (windowSize < 768) {
       backgroundImg.src = "../pod-landing/assets/mobile/image-host.jpg";
     } else if (windowSize >= 768 && windowSize < 1440) {
-      backgroundImg.src = "/pod-landing/assets/tablet/image-host.jpg";
+      backgroundImg.src = "../pod-landing/assets/tablet/image-host.jpg";
     } else {
-      backgroundImg.src = "./pod-landing/assets/desktop/image-host.jpg";
+      backgroundImg.src = "../pod-landing/assets/desktop/image-host.jpg";
     }
   }
 });
